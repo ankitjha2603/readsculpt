@@ -1,0 +1,118 @@
+.book-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: "Inter", sans-serif;
+    margin-left: 50px;
+}
+
+.cover {
+    background-image: url("../../assets/book-animation.gif");
+    width: 190px;
+    height: 19em;
+}
+
+.cover-image-and-basic-info {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.basic-info {
+    display: flex;
+    flex-direction: column;
+    padding: 4px 25px;
+}
+
+.d-book-info {
+    display: flex;
+}
+
+.book-info-key {
+    width: 180px;
+    font-weight: 500;
+    margin: 8px 0px;
+}
+
+.book-info-value {
+    width: 300px;
+    padding-left: 15px;
+}
+
+.read-from-link-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 7px;
+}
+
+.read-from-link {
+    display: flex;
+    padding: 10px 15px;
+    background-color: white;
+    border: none;
+    margin-right: 10px;
+    border-radius: 10px;
+    border: 3px solid transparent;
+}
+
+.read-from-link:hover {
+    background-color: var(--rs-light-grey);
+    border-color: var(--border-color-on-hover);
+}
+
+.read-from-link>.logo {
+    height: 24px;
+    width: 24px;
+    margin-right: 10px;
+}
+
+.kuku-fm-logo {
+    background-image: url(../../assets/website-logos/kuku-fm.jpeg);
+}
+
+.amazon-logo {
+    background-image: url(../../assets/website-logos/amazon.png);
+    margin-top: 5px;
+}
+
+@media (max-width: 750px) {
+    .cover-image-and-basic-info {
+        align-items: center;
+    }
+
+    .basic-info {
+        display: flex;
+        flex-direction: column;
+        padding: 4px 5px;
+        max-width: 100%;
+    }
+
+    .cover-image-and-basic-info {
+        flex-direction: column;
+    }
+
+    .input-second-line {
+        display: flex;
+        flex-direction: column;
+    }
+
+    button.add-comment {
+        align-self: flex-end;
+    }
+}
+
+@media (max-width: 320px) {
+    body {
+        margin: 0px;
+    }
+
+    .book-title {
+        margin-left: 10px;
+    }
+}
+
+@media (min-width: 1065px) {
+    .book-info-value {
+        width: 600px;
+        padding-left: 15px;
+    }
+}

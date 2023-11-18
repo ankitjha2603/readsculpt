@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+body {
+    background-color: var(--rs-light-grey);
+    margin: 25px 30px;
+}
+
+word:hover {
+    background-color: #93b8db9c;
+}
+
+.summary-head,
+.plot-head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.play-pause {
+    height: 26px;
+    width: 25px;
+    margin-left: 10px;
+}
+
+.play-pause[status="play"] {
+    background-image: url(../../assets/play.svg);
+}
+
+.play-pause[status="pause"] {
+    background-image: url(../../assets/pause.svg);
+}

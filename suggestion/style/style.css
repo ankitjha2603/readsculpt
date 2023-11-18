@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
+
+section#card-collection {
+    position: fixed;
+    width: 100vw;
+    max-height: 95vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: auto;
+    padding: 10px;
+    top: 50px;
+}
+
+h1.heading {
+    width: 100%;
+    text-align: center;
+    font-family: "Ubuntu", sans-serif;
+}
+
+rs-block {
+    width: 29rem;
+    min-height: 16em;
+    height: fit-content;
+    margin: 10px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.25s;
+    padding: 10px 15px;
+    display: flex;
+    background-color: var(--rs-light-grey);
+    border: 5px solid transparent;
+}
+
+rs-block[creator="you"]::after {
+    content: "";
+    height: 30px;
+    width: 30px;
+    content: ".";
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    background-image: url(../../assets/award.svg);
+}
+
+rs-block:hover {
+    box-shadow: 2px 3px 9px #888888;
+    border-bottom-color: var(--rs-theme-light-green);
+}
+
+rs-block[creator="you"]:hover {
+    border-bottom-color: var(--rs-theme-dark-green);
+}
+
+.bk-cover-photo {
+    width: 140px;
+    height: 14.5em;
+    background-image: url("../../assets/book-animation.gif");
+    margin-right: 10px;
+}
+
+.bk-cover-photo[state="no-cover-image-found"] {
+    background-image: url("../../assets/no-cover-image-found.jpg");
+}
+
+.bk-info {
+    width: 290px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.bk-title {
+    font-size: 1.25em;
+    font-weight: bolder;
+    line-height: 1.4em;
+    margin-bottom: 10px;
+}
+
+.bk-info-title {
+    font-size: 1.1em;
+    font-weight: bolder;
+    line-height: 20px;
+}
+
+p.reason {
+    font-size: 11.8px;
+    margin-bottom: 0;
+    font-weight: 500;
+    min-height: 110px;
+    width: fit-content;
+}
+
+@media (max-width: 767px) {
+    section#card-collection {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 500px) {
+    rs-block {
+        flex-direction: column;
+        height: unset;
+        align-items: center;
+        width: 93vw;
+    }
+
+    .bk-cover-photo {
+        height: 250px;
+    }
+
+    .bk-info {
+        width: unset;
+    }
+}
+
+.like-dislike-container {
+    display: flex;
+    margin-top: 5px;
+}
+
+.like-container,
+.dislike-container {
+    display: flex;
+    width: fit-content;
+    margin-right: 10px;
+}
+
+.like-icon,
+.dislike-icon {
+    height: 25px;
+    width: 25px;
+    margin: 0px 10px 0px 4px;
+}
+
+.like-count,
+.dislike-count {
+    width: 20px;
+}
+
+.like-icon[state="before"] {
+    background-image: url(../../assets/like/before-like.svg);
+}
+
+.like-icon[state="after"] {
+    background-image: url(../../assets/like/after-like.svg);
+}
+
+.like-icon[state="before"]:hover {
+    background-image: url(../../assets/like/hover-like.svg);
+}
+
+.dislike-icon[state="before"] {
+    background-image: url(../../assets/like/before-dislike.svg);
+}
+
+.dislike-icon[state="after"] {
+    background-image: url(../../assets/like/after-dislike.svg);
+}
+
+.dislike-icon[state="before"]:hover {
+    background-image: url(../../assets/like/hover-dislike.svg);
+}
+
+.unauthorized-user {
+    position: relative;
+}
+
+.unauthorized-user>.hide-like-dislike-to-unauthorized-user {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--rs-light-grey);
+    opacity: 0.5;
+}
+
+.submit-suggestion {
+    font-family: "Ubuntu", sans-serif;
+    background-color: var(--rs-light-grey);
+    cursor: pointer;
+    width: fit-content;
+    padding: 5px 25px;
+    position: fixed;
+    right: 40px;
+    top: 10px;
+}
+
+.submit-suggestion:hover {
+    background-color: var(--rs-dark-grey);
+    color: white;
+}
+
+.submit-suggestion.not-for-unauthorized-user {
+    opacity: 0.5;
+    cursor: no-drop;
+}
+
+.light-background {
+    height: 100vh;
+    width: 100vw;
+    background-color: #a4a4a4;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    opacity: 0.65;
+}
+
+.center {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+}
+
+.submit-suggestion-form-container {
+    height: fit-content;
+    width: 85vmin;
+    background-color: white;
+    padding: 20px 10px;
+}
+
+.submit-suggestion-form-container>h2 {
+    margin: 0px 10px;
+}
+
+label.suggest-book-form-title {
+    font-size: 1.25em;
+    font-weight: 500;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group-book-name {
+    margin: 20px 10px;
+}
+
+.form-group-suggestion-reason {
+    margin: 10px 10px;
+}
+
+.form-group-cover-image {
+    margin: 10px 10px;
+}
+
+button.form-submit-suggestion,
+button.form-cancel-suggestion {
+    border: none;
+    padding: 5px 15px;
+}
+
+button.form-submit-suggestion {
+    margin-left: 15px;
+}
+
+button.form-submit-suggestion:hover {
+    background-color: var(--rs-theme-light-green);
+}
+
+button.form-cancel-suggestion:hover {
+    color: white;
+    background-color: #dc3545;
+}
+
+.submit-suggestion-form-container>form>.form-group>.form-control:focus {
+    border-color: var(--rs-theme-light-green);
+    box-shadow: 0 0 0 0.25rem rgba(49.409485%, 85.099792%, 34.118652%, 0.5);
+}
+
+#suggest-book-name:focus {
+    font-weight: 500;
+}
+
+.submit-suggestion-form-container>form>.form-group>.invalid-feedback {
+    display: unset;
+    opacity: 0;
+}
+
+.upload-cover-image-demo {
+    height: 75px;
+    width: 60px;
+    margin-left: 15px;
+    background-image: url(../assets/book-animation.gif);
+    margin-bottom: 15px;
+}
+
+.upload-cover-image-cancel {
+    background-color: rgba(265, 265, 265, 0.8);
+    height: 100%;
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: #dc3545;
+}
+
+.upload-cover-image-demo[state="after"] {
+    cursor: pointer;
+}
+
+.upload-cover-image-demo:not([state="after"]) {
+    cursor: no-drop;
+}
+
+.upload-cover-image-demo[state="after"]:hover>.upload-cover-image-cancel {
+    display: flex;
+}
+
+.delete[creator="you"] {
+    height: 25px;
+    width: 25px;
+    margin-left: 5px;
+    background-image: url(../../assets/delete.svg);
+}
+
+.delete[creator="you"]:hover {
+    background-image: url(../../assets/delete-hover.svg);
+}
+
+.delete:not([creator="you"]) {
+    display: none;
+}

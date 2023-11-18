@@ -1,0 +1,61 @@
+rs-option {
+    height: 55px;
+    width: 100vw;
+    z-index: 100;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px 0px 80px;
+    justify-content: flex-end;
+    top: 0px;
+    background-color: white;
+}
+
+.sorting {
+    display: flex;
+    margin-right: 58px;
+    margin-left: 30px;
+}
+
+select.sorting-options {
+    height: 40px;
+    width: 200px;
+    border-radius: 0;
+    color: black;
+    background-color: var(--rs-light-grey);
+    border: none;
+}
+
+.sorting>button.sorting-direction {
+    background-color: var(--rs-light-grey);
+    border: none;
+    color: black;
+    border-radius: 0;
+    transform: rotateX(0deg);
+    transition: transform 1s;
+}
+
+.sorting>button.sorting-direction.reverse {
+    transform: rotateX(360deg);
+}
+
+select.sorting-options:hover,
+.sorting>button.sorting-direction:hover {
+    box-shadow: 0.25px 0.25px 6px #888888;
+}
+
+.sort-icon {
+    transform: scale(1.4);
+    position: relative;
+    bottom: 4px;
+}
+
+.sort-icon.hidden {
+    display: none;
+}
+
+@media (max-width: 500px) {
+    select.sorting-options {
+        width: 100px;
+    }
+}

@@ -1,0 +1,42 @@
+.auth-provider {
+    font-family: system-ui, roboto, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 40px;
+    padding: 0 21px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    text-align: center;
+    background: white;
+    color: #535a60;
+}
+
+.auth-provider {
+    box-shadow: 3px 3px 5px #bebebe, -1px -1px 11px #ffffff;
+}
+
+.auth-provider:hover {
+    box-shadow: inset 4px 4px 5px #bebebe, inset -5px -5px 5px #ffffff
+}
+
+.user-option {
+    cursor: pointer;
+}
+
+.user-option>ul {
+    position: absolute;
+    inset: auto auto 0px 0px;
+    margin: 0px;
+    transform: translate(0px, -34.4px);
+}
+
+li.log-out>div:hover,
+li.delete-account>div:hover {
+    background-color: orangered;
+}
+
+li.delete-account {
+    display: none !important;
+}

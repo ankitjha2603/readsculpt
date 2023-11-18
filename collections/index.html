@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/brand/favicon.png" type="image/x-icon" />
+    <title>Collections: Coming soon</title>
+    <!---------------------------------------------->
+    <!--SECTION: seo of page -->
+    <meta
+      name="description"
+      content="This upcoming collections is scheduled for release on December 25, 2023."
+    />
+    <meta name="author" content="ankitjha2603" />
+    <meta property="og:title" content="Blog: Coming soon" />
+    <meta
+      property="og:description"
+      content="This upcoming collections is scheduled for release on December 25, 2023."
+    />
+    <meta property="og:type" content="website" />
+    <link
+      rel="sitemap"
+      type="application/xml"
+      title="Sitemap"
+      href="https://ankitjha2603.github.io/ReadSculpt/sitemap.xml"
+    />
+    <meta
+      property="og:image"
+      content="https://ankitjha2603.github.io/ReadSculpt/assets/brand/logo.svg0"
+    />
+    <meta
+      property="og:url"
+      content="https://ankitjha2603.github.io/ReadSculpt/"
+    />
+    <meta name="theme-color" content="#008037" />
+    <!---------------------------------------------->
+
+    <!---------------------------------------------->
+    <!--SECTION: google tags -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-4J64SC1QY7"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-4J64SC1QY7");
+    </script>
+    <!--Google verification--->
+    <meta
+      name="google-site-verification"
+      content="5QsjbXuM1buDwEtnxWDKN9dE1qgf_dgz646EdwUxSWg"
+    />
+    <!---------------------------------------------->
+    <link rel="stylesheet" href="../components/default/style.css" />
+  </head>
+
+  <link rel="stylesheet" href="style/style.css" />
+  <body>
+    <div class="bgimg">
+      <div class="topleft">
+        <p class="logo"></p>
+      </div>
+      <div class="middle">
+        <h1>COMING SOON</h1>
+        <hr />
+        <p id="time-left">-</p>
+      </div>
+      <div class="bottomleft">
+        <p>Thanks</p>
+      </div>
+    </div>
+  </body>
+  <script>
+    const targetDate = new Date("December 25, 2023 00:00:00").getTime();
+
+    const updateCountdown = setInterval(function () {
+      const remainingTime = targetDate - new Date().getTime();
+      if (remainingTime < 0) {
+        clearInterval(updateCountdown);
+        timeLeftElement.innerHTML = "Countdown expired";
+      }
+      const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor(
+        (remainingTime % (1000 * 60 * 60)) / (1000 * 60)
+      );
+      const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+      const timeLeftElement = document.getElementById("time-left");
+      timeLeftElement.innerHTML = `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+    }, 1000);
+  </script>
+</html>
