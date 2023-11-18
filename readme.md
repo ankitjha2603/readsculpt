@@ -2,6 +2,9 @@
 
 Welcome to ReadScript, your ultimate destination for book lovers! In a world where book enthusiasts are always on the lookout for their next literary escapade, ReadScript is here to simplify the selection process and make your reading journey more enjoyable.
 
+
+Currently, the mobile optimization is a work in progress; what you see is a basic version to kick things off. Improvements for mobile are on the horizon! Also, it's worth mentioning that this is the foundational stage of our upcoming project.
+
 ## Live Demo
 
 Check out the live demo of ReadScript at [ReadSculpt](https://ankitjha2603.github.io/readsculpt).
